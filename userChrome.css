@@ -1,8 +1,8 @@
-/*
-Feel Free to modify share or improve this UI
-GNU/GPLv2
-line 44,50,55 to choose a color that matches your color scheme , current one is solarized
-*/
+/* declaring color variables  current scheme is for my solarized setup you can change them to fit your needs */
+:root {
+    --main-color:#002b36;
+    --tab-color:#2aa198;
+}
 
 /* hide back/forward buttons  we can use (alt+left|right ) instead */
 #main-window :-moz-any(#back-button, #forward-button) {
@@ -41,18 +41,18 @@ i don't really know what this do but removing it gives a weired behaviour when o
 /* here is a serie of color background changing to match my solarizd terminal color scheme */
 
 .tab-line{
-	background-color: #2aa198 !important;
+	background-color: var(--tab-color) !important;
 }
 
 .tab-background {
 	border-top: none !important;
     background-attachment: none!important;
-    background-color: #002b36 !important;
+    background-color: var(--main-color) !important;
     background-image: none!important;
 }
 
 #nav-bar,#urlbar-container,#urlbar,#PanelUI-menu-button{ 
-    background-color: #002b36 !important;
+    background-color: var(--main-color) !important;
 }
 
 /* hides a ugly black bottom background under each unfocused tab */
