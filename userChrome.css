@@ -1,0 +1,74 @@
+/*
+Feel Free to modify share or improve this UI
+GNU/GPLv2
+line 44,50,55 to choose a color that matches your color scheme , current one is solarized
+*/
+
+/* hide back/forward buttons  we can use (alt+left|right ) instead */
+#main-window :-moz-any(#back-button, #forward-button) {
+	display: none;
+}
+/* hide close tab button we can use ( ctrl+w ) to close ( ctrl+t ) to open*/
+.tab-close-button {
+	display: none;
+} 
+/* tab occupy all space 
+   tab title font is reduced
+*/
+.tabbrowser-tab[fadein]:not([pinned]) {
+	max-width: 100% !important;
+	font-size: 0.8em !important;
+}
+/*
+url bar font size is reduced
+no borders
+no shadow
+no round edges
+*/
+#urlbar, .searchbar-textbox,#navbar {
+  font-size: 0.8em !important;
+  border: none !important;
+  box-shadow: none !important;
+  --toolbarbutton-border-radius: 0px !important;
+}
+/*
+i don't really know what this do but removing it gives a weired behaviour when opening and closing tabs any analysis are welcome ^^
+*/
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+   border:none !important;
+}
+
+/* here is a serie of color background changing to match my solarizd terminal color scheme */
+
+.tab-line{
+	background-color: #2aa198 !important;
+}
+
+.tab-background {
+	border-top: none !important;
+    background-attachment: none!important;
+    background-color: #002b36 !important;
+    background-image: none!important;
+}
+
+#nav-bar,#urlbar-container,#urlbar,#PanelUI-menu-button{ 
+    background-color: #002b36 !important;
+}
+
+/* hides a ugly black bottom background under each unfocused tab */
+#navigator-toolbox{
+	--tabs-border-color: none !important;
+}
+/* hides another ugly black bottom background under the urlbar container */
+:root:-moz-lwtheme-brighttext {
+    --toolbox-border-bottom-color: none !important;
+}
+/* reducing the tabs height more */
+:root[uidensity="compact"] #titlebar, :root[uidensity="compact"] #tabbrowser-tabs {
+    --tab-min-height: 26px !important;
+}
+/* removing the useless padding and marging between elements of the urlbar etc..*/
+#nav-bar,#urlbar,#PanelUI-menu-button{
+    padding: 0px !important;
+    margin:  0px !important;
+}
