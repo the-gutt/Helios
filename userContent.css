@@ -5,10 +5,16 @@
     body {
         background-color: var(--main-color) !important;
     }
+    #newtab-search-text,.top-site-icon ,#onboarding-notification-bar,#onboarding-notification-action-btn,.card{
+    	background-color: var(--main-color) !important;
+    }
 }
 @-moz-document url("about:blank"){  
     body {
         background-color: var(--main-color) !important;
+    }
+    #newtab-search-text,.top-site-icon ,#onboarding-notification-bar,#onboarding-notification-action-btn,.card{
+    	background-color: var(--main-color) !important;
     }
 }
 
