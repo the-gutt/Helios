@@ -1,15 +1,23 @@
-@-moz-document url("about:newtab"),@-moz-document url("about:blank"){  
+:root {
+    --main-color:#002b36;
+}
+@-moz-document url("about:newtab"){  
     body {
-        background-color: #002b36 !important;
+        background-color: var(--main-color) !important;
+    }
+}
+@-moz-document url("about:blank"){  
+    body {
+        background-color: var(--main-color) !important;
     }
 }
 
 @-moz-document url("about:home") {  
     body {
-        background-color: #002b36 !important;
+        background-color: var(--main-color) !important;
     }
     #newtab-search-text,.top-site-icon ,#onboarding-notification-bar,#onboarding-notification-action-btn,.card{
-    	background-color: #002b36 !important;
+    	background-color: var(--main-color) !important;
     }
 
 }
