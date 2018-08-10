@@ -13,6 +13,7 @@
 * put userChrome.css & userContent.css in your chrome folder ( see link above )
 
 ### Features:
+* Solarized background colors (you can use the one that suits you)
 * Removed all useless borders,paddings and margins
 * Removed tab close button ( ctrl+w ) is better
 * Removed (back/prev) button (alt+left|right) is better
