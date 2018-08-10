@@ -1,7 +1,7 @@
 # Helios
 ## A minimal user interface for Firefox
 
-[![sample screenshot](https://raw.githubusercontent.com/toufikbelouadah/Helios/master/screenshot.png)](https://raw.githubusercontent.com/toufikbelouadah/Helios/master/screenshot1.png)
+[![sample screenshot](https://raw.githubusercontent.com/toufikbelouadah/Helios/master/screenshot1.png)](https://raw.githubusercontent.com/toufikbelouadah/Helios/master/screenshot1.png)
 [![sample screenshot](https://raw.githubusercontent.com/toufikbelouadah/Helios/master/screenshot.png)](https://raw.githubusercontent.com/toufikbelouadah/Helios/master/screenshot.png)
 
 ### Why ?
