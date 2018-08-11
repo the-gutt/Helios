@@ -1,17 +1,21 @@
 /* declaring color variables  current scheme is for my solarized setup you can change them to fit your needs */
 :root {
     --main-color:#002b36;
-    --tab-color:#2aa198;
+    --tab-color:#ffffff;
 }
-
-/* hide back/forward buttons  we can use (alt+left|right ) instead */
-#main-window :-moz-any(#back-button, #forward-button) {
+/* hiding useless stuffs */
+.tab-throbber,.tab-icon-image,.tab-close-button,#main-window :-moz-any(#back-button, #forward-button) {
 	display: none;
 }
-/* hide close tab button we can use ( ctrl+w ) to close ( ctrl+t ) to open*/
-.tab-close-button {
-	display: none;
-} 
+/* I don't use tabs so I just hide the new tab button. You should be able to use a similar trick as the rule above with
+css siblings selectors if you want to keep it when the tab bar is visible. */
+#tabbrowser-tabs .tabs-newtab-button { 
+	visibility: collapse !important;
+}
+/* hides a ugly black bottom background under each unfocused tab */
+#navigator-toolbox{
+	--tabs-border-color: none !important;
+}
 /* tab occupy all space 
    tab title font is reduced
 */
@@ -37,11 +41,17 @@ i don't really know what this do but removing it gives a weired behaviour when o
 .tabbrowser-tab::after, .tabbrowser-tab::before {
    border:none !important;
 }
+/* center tab text title */
+.tab-label {
+	-moz-box-flex: 1 !important; 
+	text-align: center !important;
+}
 
 /* here is a serie of color background changing to match my solarizd terminal color scheme */
 
 .tab-line{
 	background-color: var(--tab-color) !important;
+	height: 1px !important;
 }
 
 .tab-background {
@@ -55,20 +65,30 @@ i don't really know what this do but removing it gives a weired behaviour when o
     background-color: var(--main-color) !important;
 }
 
-/* hides a ugly black bottom background under each unfocused tab */
-#navigator-toolbox{
-	--tabs-border-color: none !important;
-}
+
 /* hides another ugly black bottom background under the urlbar container */
 :root:-moz-lwtheme-brighttext {
     --toolbox-border-bottom-color: none !important;
 }
 /* reducing the tabs height more */
 :root[uidensity="compact"] #titlebar, :root[uidensity="compact"] #tabbrowser-tabs {
-    --tab-min-height: 26px !important;
+    --tab-min-height: 18px !important;
 }
 /* removing the useless padding and marging between elements of the urlbar etc..*/
 #nav-bar,#urlbar,#PanelUI-menu-button{
     padding: 0px !important;
     margin:  0px !important;
+    height: 24px !important;
 }
+
+/* make the tabs hidden when there is only one tab open */
+#tabbrowser-tabs, #tabbrowser-tabs > .tabbrowser-arrowscrollbox {
+	min-height: 0 !important;
+}
+
+/* Thanks to @Speravir for making it work again in the latest versions. */
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] {
+	visibility: collapse;
+}
+
+
