@@ -11,7 +11,7 @@
 ### How ?
 * https://www.userchrome.org/how-create-userchrome-css.html
 * put userChrome.css & userContent.css in your chrome folder ( see link above )
-
+* https://addons.mozilla.org/en-US/firefox/addon/load-progress-bar/ this will add a nice progress bar instead of throbber
 ### Features:
 * Solarized background colors (you can use the one that suits you)
 * Removed all useless borders,paddings and margins
