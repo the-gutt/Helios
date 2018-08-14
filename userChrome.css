@@ -1,14 +1,29 @@
 /* declaring color variables  current scheme is for my solarized setup you can change them to fit your needs */
 :root {
-    --main-color:#002b36;
-    --tab-color:#ffffff;
+    --main-color:#002b36;;
+    --text-color:  #2aa198;
+    
+    --shade1:#b3efff;
+    --shade2:#80e5ff;
+    --shade3:#4ddbff;
+    --shade4:#1ad0ff;
+    --shade5:#00b7e6;
+    --shade6:#008eb3;
+    --shade7:#006680;
+    --shade8:#003d4d;
+    --shade9:#00141a;
 }
 /* hiding useless stuffs */
-.tab-throbber,.tab-icon-image,.tab-close-button,#main-window :-moz-any(#back-button, #forward-button) {
+.titlebar-placeholder,#wrapper-alltabs-button,.tab-close-button,.tab-icon-image,#main-window :-moz-any(#back-button, #forward-button) {
 	display: none;
 }
-/* I don't use tabs so I just hide the new tab button. You should be able to use a similar trick as the rule above with
-css siblings selectors if you want to keep it when the tab bar is visible. */
+#identity-box,.urlbar-history-dropmarker,#pageActionButton{
+display: none !important
+}
+.tab-throbber{
+    margin: 0!important;
+    padding: 0!important;
+}
 #tabbrowser-tabs .tabs-newtab-button { 
 	visibility: collapse !important;
 }
@@ -29,11 +44,13 @@ no borders
 no shadow
 no round edges
 */
-#urlbar, .searchbar-textbox,#navbar {
+#urlbar {
   font-size: 0.8em !important;
   border: none !important;
   box-shadow: none !important;
   --toolbarbutton-border-radius: 0px !important;
+  color: var(--text-color) !important; 
+  text-align: center !important;
 }
 /*
 i don't really know what this do but removing it gives a weired behaviour when opening and closing tabs any analysis are welcome ^^
@@ -45,26 +62,31 @@ i don't really know what this do but removing it gives a weired behaviour when o
 .tab-label {
 	-moz-box-flex: 1 !important; 
 	text-align: center !important;
+    color : var(--text-color);
 }
 
 /* here is a serie of color background changing to match my solarizd terminal color scheme */
 
 .tab-line{
-	background-color: var(--tab-color) !important;
-	height: 1px !important;
+	/*background-color: var(--main-color) !important;
+	height: 1px !important;*/
+    visibility: collapse !important;
 }
 
 .tab-background {
-	border-top: none !important;
+	border: none !important;
     background-attachment: none!important;
     background-color: var(--main-color) !important;
     background-image: none!important;
 }
 
+.tabbrowser-tab:not([selected]) .tab-background {
+	border: none !important;
+    background-color: var(--shade8) !important;
+}
 #nav-bar,#urlbar-container,#urlbar,#PanelUI-menu-button{ 
     background-color: var(--main-color) !important;
 }
-
 
 /* hides another ugly black bottom background under the urlbar container */
 :root:-moz-lwtheme-brighttext {
@@ -86,9 +108,6 @@ i don't really know what this do but removing it gives a weired behaviour when o
 	min-height: 0 !important;
 }
 
-/* Thanks to @Speravir for making it work again in the latest versions. */
 #tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] {
 	visibility: collapse;
 }
-
-
