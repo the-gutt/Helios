@@ -1,11 +1,85 @@
 :root {
     --main-color:#002b36;
+    --text-color:#2aa198;
+
+    --shade1:#b3efff;
+    --shade2:#80e5ff;
+    --shade3:#4ddbff;
+    --shade4:#1ad0ff;
+    --shade5:#00b7e6;
+    --shade6:#008eb3;
+    --shade7:#006680;
+    --shade8:#003d4d;
+    --shade9:#00141a;
 }
-@-moz-document url("about:newtab"),url("about:blank"),url("about:home") {  
+@-moz-document url("about:newtab"),url("about:blank"), url("about:home") {  
     body {
         background-color: var(--main-color) !important;
     }
     #newtab-search-text,.top-site-icon ,#onboarding-notification-bar,#onboarding-notification-action-btn,.card{
     	background-color: var(--main-color) !important;
     }
+}
+
+/* Youtube Shit */
+@-moz-document domain(youtube.com) {
+	#container[class="style-scope ytd-masthead"]{
+        background-color: var(--main-color) !important;
+	}
+	#container[class="style-scope ytd-searchbox"]{
+		border-color: var(--shade8 ) !important;
+		background-color: var(--main-color) !important;
+		border-width: 1 !important;
+	}
+	#search-input[class="ytd-searchbox-spt"]{
+				background-color: var(--main-color) !important;
+						border-radius: none !important;
+	}
+#search-icon-legacy.ytd-searchbox {
+		border-color: var(--shade8) !important;
+		border-left: none !important;
+
+}
+ytd-browse {
+        background-color: var(--shade9) !important;
+
+}
+#columns.ytd-watch-flexy {
+        background-color: var(--shade9) !important;
+}
+#channel-header.ytd-c4-tabbed-header-renderer {
+        background-color: var(--shade9) !important;
+}
+#tabs-inner-container.ytd-c4-tabbed-header-renderer {
+    background-color: var(--main-color) !important;
+}
+ytd-thumbnail-overlay-side-panel-renderer {
+
+    background-color: var(--main-color)!important; 
+}
+paper-listbox.yt-dropdown-menu {
+    background-color: var(--main-color)!important;
+}
+ytd-active-account-header-renderer {
+    background-color: var(--shade9)!important;
+}
+
+canvas.ytd-multi-page-menu-renderer, caption.ytd-multi-page-menu-renderer, center.ytd-multi-page-menu-renderer, cite.ytd-multi-page-menu-renderer, code.ytd-multi-page-menu-renderer, dd.ytd-multi-page-menu-renderer, del.ytd-multi-page-menu-renderer, dfn.ytd-multi-page-menu-renderer, div.ytd-multi-page-menu-renderer, dl.ytd-multi-page-menu-renderer, dt.ytd-multi-page-menu-renderer, em.ytd-multi-page-menu-renderer, embed.ytd-multi-page-menu-renderer, fieldset.ytd-multi-page-menu-renderer, font.ytd-multi-page-menu-renderer, form.ytd-multi-page-menu-renderer, h1.ytd-multi-page-menu-renderer, h2.ytd-multi-page-menu-renderer, h3.ytd-multi-page-menu-renderer, h4.ytd-multi-page-menu-renderer, h5.ytd-multi-page-menu-renderer, h6.ytd-multi-page-menu-renderer, hr.ytd-multi-page-menu-renderer, i.ytd-multi-page-menu-renderer, iframe.ytd-multi-page-menu-renderer, img.ytd-multi-page-menu-renderer, ins.ytd-multi-page-menu-renderer, kbd.ytd-multi-page-menu-renderer, label.ytd-multi-page-menu-renderer, legend.ytd-multi-page-menu-renderer, li.ytd-multi-page-menu-renderer, menu.ytd-multi-page-menu-renderer, object.ytd-multi-page-menu-renderer, ol.ytd-multi-page-menu-renderer, p.ytd-multi-page-menu-renderer, pre.ytd-multi-page-menu-renderer, q.ytd-multi-page-menu-renderer, s.ytd-multi-page-menu-renderer, samp.ytd-multi-page-menu-renderer, small.ytd-multi-page-menu-renderer, span.ytd-multi-page-menu-renderer, strike.ytd-multi-page-menu-renderer, strong.ytd-multi-page-menu-renderer, sub.ytd-multi-page-menu-renderer, sup.ytd-multi-page-menu-renderer, table.ytd-multi-page-menu-renderer, tbody.ytd-multi-page-menu-renderer, td.ytd-multi-page-menu-renderer, tfoot.ytd-multi-page-menu-renderer, th.ytd-multi-page-menu-renderer, thead.ytd-multi-page-menu-renderer, tr.ytd-multi-page-menu-renderer, tt.ytd-multi-page-menu-renderer, u.ytd-multi-page-menu-renderer, ul.ytd-multi-page-menu-renderer, var.ytd-multi-page-menu-renderer {
+    background: var(--main-color)!important;
+}
+
+canvas.ytd-guide-renderer, caption.ytd-guide-renderer, center.ytd-guide-renderer, cite.ytd-guide-renderer, code.ytd-guide-renderer, dd.ytd-guide-renderer, del.ytd-guide-renderer, dfn.ytd-guide-renderer, div.ytd-guide-renderer, dl.ytd-guide-renderer, dt.ytd-guide-renderer, em.ytd-guide-renderer, embed.ytd-guide-renderer, fieldset.ytd-guide-renderer, font.ytd-guide-renderer, form.ytd-guide-renderer, h1.ytd-guide-renderer, h2.ytd-guide-renderer, h3.ytd-guide-renderer, h4.ytd-guide-renderer, h5.ytd-guide-renderer, h6.ytd-guide-renderer, hr.ytd-guide-renderer, i.ytd-guide-renderer, iframe.ytd-guide-renderer, img.ytd-guide-renderer, ins.ytd-guide-renderer, kbd.ytd-guide-renderer, label.ytd-guide-renderer, legend.ytd-guide-renderer, li.ytd-guide-renderer, menu.ytd-guide-renderer, object.ytd-guide-renderer, ol.ytd-guide-renderer, p.ytd-guide-renderer, pre.ytd-guide-renderer, q.ytd-guide-renderer, s.ytd-guide-renderer, samp.ytd-guide-renderer, small.ytd-guide-renderer, span.ytd-guide-renderer, strike.ytd-guide-renderer, strong.ytd-guide-renderer, sub.ytd-guide-renderer, sup.ytd-guide-renderer, table.ytd-guide-renderer, tbody.ytd-guide-renderer, td.ytd-guide-renderer, tfoot.ytd-guide-renderer, th.ytd-guide-renderer, thead.ytd-guide-renderer, tr.ytd-guide-renderer, tt.ytd-guide-renderer, u.ytd-guide-renderer, ul.ytd-guide-renderer, var.ytd-guide-renderer {
+
+    background: var(--main-color)!important;
+
+}
+canvas.ytd-account-settings, caption.ytd-account-settings, center.ytd-account-settings, cite.ytd-account-settings, code.ytd-account-settings, dd.ytd-account-settings, del.ytd-account-settings, dfn.ytd-account-settings, div.ytd-account-settings, dl.ytd-account-settings, dt.ytd-account-settings, em.ytd-account-settings, embed.ytd-account-settings, fieldset.ytd-account-settings, font.ytd-account-settings, form.ytd-account-settings, h1.ytd-account-settings, h2.ytd-account-settings, h3.ytd-account-settings, h4.ytd-account-settings, h5.ytd-account-settings, h6.ytd-account-settings, hr.ytd-account-settings, i.ytd-account-settings, iframe.ytd-account-settings, img.ytd-account-settings, ins.ytd-account-settings, kbd.ytd-account-settings, label.ytd-account-settings, legend.ytd-account-settings, li.ytd-account-settings, menu.ytd-account-settings, object.ytd-account-settings, ol.ytd-account-settings, p.ytd-account-settings, pre.ytd-account-settings, q.ytd-account-settings, s.ytd-account-settings, samp.ytd-account-settings, small.ytd-account-settings, span.ytd-account-settings, strike.ytd-account-settings, strong.ytd-account-settings, sub.ytd-account-settings, sup.ytd-account-settings, table.ytd-account-settings, tbody.ytd-account-settings, td.ytd-account-settings, tfoot.ytd-account-settings, th.ytd-account-settings, thead.ytd-account-settings, tr.ytd-account-settings, tt.ytd-account-settings, u.ytd-account-settings, ul.ytd-account-settings, var.ytd-account-settings {
+    background: var(--main-color) !important;
+}
+paper-item.ytd-account-settings {
+    color: var(--text-color) !important
+}
+ytd-search {
+    background-color: var(--shade9) !important;
+}
 }
